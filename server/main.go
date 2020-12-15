@@ -1,13 +1,14 @@
 package main
 
-import "github.com/gin-gonic/gin"
+import (
+	"go-admin/core"
+)
 
 func main()  {
-	r := gin.Default()
-	r.GET("/ping", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message" : "pong",
-		})
-	})
-	r.Run(":8000")
+
+	core.SetConfig() //加载配置
+
+	core.Gorm()		//初始化数据库
+
+	core.StartServer()	//启动服务
 }

@@ -1,0 +1,8 @@
+app_name : go-admin
+
+mysql:
+  host : 127.0.0.1
+  user : root
+  password : root
+  dbname : admin
+  config: 'charset=utf8mb4&parseTime=True&loc=Local'
