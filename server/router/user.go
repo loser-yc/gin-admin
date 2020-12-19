@@ -6,5 +6,5 @@ import (
 )
 
 func InitUserRouter(Router *gin.RouterGroup)  {
-	Router.GET("/user", v1.Login)
+	Router.GET("/login", v1.Login)
 }
